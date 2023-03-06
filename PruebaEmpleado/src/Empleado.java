@@ -1,21 +1,25 @@
 public class Empleado {
 
-//    Atributos
+    //    Atributos
     private String dni;
     private String nombre;
-    private  double salario;
+    private double salario;
 
-//    Composicion
+    //    Composicion
     private Nacionalidad nacionalidad;
 
     private static int numero = 0;
 
-//    Metodos
+    //    Metodos
     public Empleado() {
         numero++;
         nacionalidad = new Nacionalidad();
 
     }
+    public void incrementarSalario(double incremento) {
+        salario = salario + incremento;
+    }
+
 
     public Empleado(String dni, String nombre, double salario, Nacionalidad nacionalidad) {
         this.dni = dni;
@@ -66,6 +70,7 @@ public class Empleado {
     }
 
     public String toString() {
-        return this.dni + ", " +this.nombre + ", " + this.salario+ ", " + this.nacionalidad.toString();
+        return this.dni + ", " + this.nombre + ", " + this.salario + ", " + this.nacionalidad.toString();
     }
+
 }
