@@ -6,5 +6,7 @@ public class Main {
         miVehiculo = new Bicicleta();
         miVehiculo.mover(3); // La bicicleta está pedaleando 3 metros
         // La bicicleta está yendo lento
+        miVehiculo = new Vehiculo();
+        miVehiculo.mover(10);
     }
 }
